@@ -3,7 +3,7 @@ $ToBeCleaned = @()
 
 # Do these computers have the file CLEANUP_COMPLETE ????
 # If Yes, then add to an array ToBeCleaned
-foreach ($omputer in $computers) {
+foreach ($computer in $computers) {
   Write-Host ("Checking::"+$computer)
   $result = Test-Path ("\\"+$computer+"\c$\<PATH-TO-FILE")
   if ($result -eq $true) {
